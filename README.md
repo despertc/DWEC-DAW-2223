@@ -22,11 +22,50 @@ Todos los apuntes de este módulo se comparten bajo esta licencia.
 
 Descargamos el paquete **.deb** de la página de [Visual Studio Code](https://code.visualstudio.com/Download) y lo instalamos.
 
-Posteriormente instalaremos diferentes extensiones como **Vetur** para poder trabajar con ficheros *vue* que usaremos en el siguiente bloque de Vue.
+Posteriormente instalaremos diferentes extensiones como **[Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)** para poder trabajar con ficheros *vue* que usaremos en el siguiente bloque de Vue.
+
+Debemos tener la **terminal** integrada en Visual Studio Code. En caso contrario, será necesario que instalemos esta extensión.
+
+### Google Chrome
+
+Utilizaremos este navegador para ejecutar nuestas aplicaciones y nuestras pruebas con JS y Vue. Lo podemos descargar de [aquí](https://www.google.com.mx/intl/es-419/chrome/?brand=CHBD&gclid=Cj0KCQiAtrnuBRDXARIsABiN-7AAMm13Ae3KDIib46Laxfe6tzD_w4yvDdpq5XsPw1eNlOkZ_0-3x3IaAvLEEALw_wcB&gclsrc=aw.ds).
+
+Instalaremos también de forma recomandada las siguientes extensiones:
+
+- [Vue DevTools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
+- [Json Viewer Awesome](https://chrome.google.com/webstore/detail/json-viewer-pro/eifflpmocdbdmepbjaopkkhbfmdgijcc)
 
 ### npm
 
-Es el gestor de paquetes de **Node JS**. Si no lo tenemos instalaremos node.js tal y como se indica en la página de [nodejs.org](https://nodejs.org/es/download/package-manager/).
+Es el gestor de paquetes de **Node JS**. Si no lo tenemos instalaremos node.js tal y como se indica en la página de [nodejs.org](https://nodejs.org/es/download/package-manager/). Para comprobar la versión utilizamos:
+
+```
+node --version
+```
+
+### Proyecto base JS
+
+Una vez instalado npm y todo lo necesario de VS Code, vamos a trabajar con un proyecto realizado con Webpack para poder hacer pruebas con JS directamente y de una forma cómoda.
+
+Lo primero que debemos de hacer después de descargar el código es ejecutar el comando:
+
+```
+npm install
+```
+
+Ese comando descargará todos los módulos de node necesarios para ejecutar el proyecto.
+
+Cuando termine de instalar los node_modules, entonces podermos ejecutar el proyecto de con el siguiente comando
+
+```
+npm start
+```
+
+Para que eso funcione, recuerden que deben de ejecutar ese comando en el mismo directorio donde se encuentra el `package.json`
+
+### Vue CLI
+
+Aunque Vue CLI no se utilizará hasta el segundo bloque, vamos a instalarlo ahora al principio del curso para posteriormente no tener problemas. Seguiremos la guía publicada en su [página oficial](https://cli.vuejs.org/guide/installation.html).
 
 ## Guía didáctica
 
@@ -176,31 +215,32 @@ Todos estos contenidos se organizan en 2 bloques temáticos:
 - Bloque 1: JavaScript
 - Bloque 2: Frameworks JavaScript. Vue JS
 
-Además al final del módulo se realizará un proyecto integrador junto con los módulos de *Desarrollo Web en Entorno Servidor* y *Interfaces Web*.
+Además, al final del módulo y de forma optativa, se realizará un proyecto integrador junto con los módulos de *Desarrollo Web en Entorno Servidor* y *Interfaces Web* (si hay disponibilidad).
 
 Los contenidos detallados de cada bloque son:
 
 - Bloque 1: JavaScript
-  - Introducción
-  - Programación con JavaScript: objetos del lenguaje, arrays y objetos
-  - BOM. DOM
-  - Eventos
-  - Formularios
-  - Ajax
-  - Apis
+  - UD1 - Introducción y sintaxis del lenguaje.
+  - UD2 -  Arrays y objetos.
+  - UD3 - DOM y BOM.
+  - UD4 - Eventos
+  - UD5 - Objetos nativos y formularios
+  - UD6 - Ajax y promesas.
+  - UD7 - Apis y otros usos.
+  - UD8 - Testeo con JS.
 - Bloque 2: Vue JS
-  - Introducción
-  - Elementos básicos
-  - Servicios
-  - Directivas
-  - Filtros
-  - Promesas
-  - Rutas
-  - Formularios
+  - UD9 - Introducción y elementos básicos
+  - UD10 - Directivas
+  - UD11 - Componentes
+  - UD12 - Axios 
+  - UD13 - SPA: vue-router
+  - UD14 - Formularios
+  - UD15 - Pinia
+  - UD16 - Composition API
 
 ### 5. Metodología
 
-La metodología de impartición del módulo será una mínima exposición teórica de contenidos y mucho trabajo en clase de prácticas, ejercicios y ejemplos para facilitar la comprensión.
+La metodología de impartición del módulo será una mínima exposición teórica de contenidos y mucho trabajo en clase y en casa de prácticas, ejercicios y ejemplos para facilitar la comprensión.
 
 La manera de trabajar en clase la parte práctica será programar de forma infividual.
 
@@ -218,7 +258,6 @@ Aquesta temporalització és una previsió i pot modificar-se per les circumstà
   - Bloque 1 - JavaScript
 - 2ª Evaluación
   - Bloque 2 - Vue JS
-  - Projecte integrador
 - 3ª Evaluación -----> Plan de recuperación para la evaluación extraordinaria.
 
 ### 7. Criterios de evaluación y calificación
@@ -227,9 +266,9 @@ Los criterios de calificación utilizados son:
 
 - La nota final del módulo será la media ponderada de los 2 bloques y el proyecto integrador según los siguientes porcentajes:
 
-  - Bloque 1: 40% (>=5)
-  - Bloque 2: 40% (>=5)
-  - Proyecto: 20% (>=5)
+  - Bloque 1: 50% (>=5)
+  - Bloque 2: 50% (>=5)
+  - Proyecto (en caso de relizarse): + 20% (>=5)
 
 - La nota de cada bloque será:
 
@@ -240,13 +279,13 @@ Los criterios de calificación utilizados son:
 
 Para aprobar cada bloque es necesario obtener al menos un 5 tanto en la parte de ejercicios como en el examen.
 
-Para aprobar el módulo hay que tener aprobados los 2 bloques y el proyecto integrador.
+Para aprobar el módulo hay que tener aprobados los 2 bloques.
 
 #### 7.1 Recuperaciones
 
 Para recuperar la parte práctica de cada bloque el alumno tendrá que entregar las prácticas no aprobadas y/o alguna práctica de recuperación (según indicación del profesor).
 
-Para recuperar el examen de un bloque se hará un examen de recuperación antes de la evaluación ordinaria de Marzo.
+Para recuperar el examen de un bloque se hará un examen de recuperación antes de la evaluación ordinaria de febrero.
 
 Quien no tenga aprobado todo el módulo en la evaluación ordinaria se tendrá que examinar de TODO el curso en la evaluación extraordinaria y tendrá que hacer unas prácticas de recuperación.
 
