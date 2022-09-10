@@ -183,33 +183,6 @@ Los contenidos básicos de este módulo son:
   - Librerías de actualización dinámica.
   - Ventajas e inconvenientes del uso de la comunicación asíncrona.
 
-Tots aquests continguts s'organitzen en 2 blocs temàtics:
-
-- Bloc 1: JavaScript
-- Bloc 2: Frameworks JavaScript. Vue JS
-
-A més al final del mòdul es realitzarà un projecte integrador juntament amb els mòduls de *Desenvolupament Web en Entorn Servidor* i *Interfícies Web*.
-
-Els continguts detallats de cada bloc són:
-
-- Bloc 1: JavaScript
-  - Introducció
-  - Programació amb JavaScript: objectes del llenguatge, [arrays](https://moodle.cipfpbatoi.es/mod/resource/view.php?id=8308) i objectes
-  - BOM. DOM
-  - Esdeveniments
-  - Formularis
-  - Ajax
-  - APIs
-- Bloc23: Vue JS
-  - Introducción
-  - Elementos básicos
-  - Servicios
-  - Directivas
-  - Filtros
-  - Promesas
-  - Rutas
-  - Formularios
-
 Todos estos contenidos se organizan en 2 bloques temáticos:
 
 - Bloque 1: JavaScript
