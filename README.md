@@ -194,7 +194,7 @@ Los contenidos detallados de cada bloque son:
 
 - Bloque 1: JavaScript
   - UD1 - Introducción y sintaxis del lenguaje.
-  - UD2 -  Arrays y objetos.
+  - UD2 - Arrays y objetos.
   - UD3 - DOM y BOM.
   - UD4 - Eventos
   - UD5 - Objetos nativos y formularios
