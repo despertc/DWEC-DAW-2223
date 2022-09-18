@@ -53,7 +53,7 @@ Allí vemos mensajes del navegador como errores y advertencias que genera el có
 
 Además en ella podemos escribir instrucciones Javascript que se ejecutarán mostrando su resultado. También la usaremos para mostrar el valor de nuestras variables y para probar código que, una vez que funcione correctamente, lo copiaremos a nuestro programa.
 
-> EJERCICIO: abre la consola y prueba las funciones _alert_, _confirm_ y _prompt_.
+> **EJERCICIO 1_UD1**: abre la consola y prueba las funciones _alert_, _confirm_ y _prompt_.
 
 Siempre depuraremos los programas desde aquí (ponemos puntos de interrupción, vemos el valor de las variables, ...).
 
@@ -135,7 +135,7 @@ miVariable=[3, 45, 2];  // y ahora un array
 miVariable=undefined;   // para volver a valer el valor especial undefined
 ```
 
-> EJERCICIO: Ejecuta en la consola del navegador las instrucciones anteriores y comprueba el valor de miVariable tras cada instrucción (para ver el valor de una variable simplemente ponemos en la consola su nombre: `miVariable`
+> **EJERCICIO 2_UD1**: Ejecuta en la consola del navegador las instrucciones anteriores y comprueba el valor de miVariable tras cada instrucción (para ver el valor de una variable simplemente ponemos en la consola su nombre: `miVariable`
 
 Ni siquiera estamos obligados a declarar una variable antes de usarla, aunque es recomendable para evitar errores que nos costará depurar. Podemos hacer que se produzca un error si no declaramos una variable incluyendo al principio de nuestro código la instrucción
 
@@ -171,7 +171,7 @@ Se declaran con **function** y se les pasan los parámetros entre paréntesis. L
 
 Puede usarse una función antes de haberla declarado por el comportamiento de Javascript llamado _hoisting_: el navegador primero carga todas las funciones y mueve las declaraciones de las variables al principio y luego ejecuta el código.
 
-> EJERCICIO: Haz una función que te pida que escribas algo y muestre un alert diciendo 'Has escrito...' y el valor introducido. Pruébala en la consola (pegas allí la función y luego la llamas desde la consola)
+> **EJERCICIO 3_UD1**: Haz una función que te pida que escribas algo y muestre un alert diciendo 'Has escrito...' y el valor introducido. Pruébala en el proyecto JS Base.
 
 #### 2.2.1 Parámetros
 
@@ -306,7 +306,7 @@ conn _arrow function_:
 let cuadrado = base => base * base;
 ```
 
-> EJERCICIO: Haz una _arrow function_ que devuelva el cubo del número pasado como parámetro y pruébala desde la consola. Escríbela primero en la forma habitual y luego la "traduces" a _arrow function_.
+> **EJERCICIO 4_UD1**: Haz una _arrow function_ que devuelva el cubo del número pasado como parámetro y pruébala desde nuestro proyecto JS Base. Escríbela primero en la forma habitual y luego la "traduces" a _arrow function_.
 
 ### 2.3 Estructuras y bucles
 
@@ -415,7 +415,7 @@ do {
 } while (nota)
 ```
 
-> EJERCICIO: Haz un programa para que el usuario juegue a adivinar un número. Obtén un número al azar (busca por internet cómo se hace o simplemente guarda el número que quieras en una variable) y ve pidiendo al usuario que introduzca un número. Si es el que busca le dices que lo ha encontrado y si no le mostrarás si el número que busca el mayor o menor que el introducido. El juego acaba cuando el usuario encuentra el número o cuando pulsa en 'Cancelar' (en ese caso le mostraremos un mensaje de que ha cancelado el juego).
+> **EJERCICIO 5_UD1**: Haz un programa para que el usuario juegue a adivinar un número. Obtén un número al azar (busca por internet cómo se hace o simplemente guarda el número que quieras en una variable) y ve pidiendo al usuario que introduzca un número. Si es el que busca le dices que lo ha encontrado y si no le mostrarás si el número que busca el mayor o menor que el introducido. El juego acaba cuando el usuario encuentra el número o cuando pulsa en 'Cancelar' (en ese caso le mostraremos un mensaje de que ha cancelado el juego).
 
 #### 2.3.4 Bucle: for
 
@@ -435,7 +435,7 @@ for (let i=0; i<datos.length; i++) {
 // El valor de sumaDatos será 125
 ```
 
-> EJERCICIO: El factorial de un número entero n es una operación matemática que consiste en multiplicar ese número por todos los enteros menores que él: **n x (n-1) x (n-2) x ... x 1**. Así, el factorial de 5 (se escribe 5!) vale **5! = 5 x 4 x 3 x 2 x 1 = 120**. Haz un script que calcule el factorial de un número entero.
+> **EJERCICIO 6_UD1**: El factorial de un número entero n es una operación matemática que consiste en multiplicar ese número por todos los enteros menores que él: **n x (n-1) x (n-2) x ... x 1**. Así, el factorial de 5 (se escribe 5!) vale **5! = 5 x 4 x 3 x 2 x 1 = 120**. Haz un script que calcule el factorial de un número entero.
 
 ##### 2.3.4.2 Bucle: for...in
 
@@ -491,7 +491,7 @@ for (let letra of cadena) {
 }  
 ```
 
-> EJERCICIO: Haz 3 funciones a las que se le pasa como parámetro un array de notas y devuelve la nota media. Cada una usará un for de una de las 3 formas vistas. Pruébalas en la consola
+> **EJERCICIO 7_UD1**: Haz 3 funciones a las que se le pasa como parámetro un array de notas y devuelve la nota media. Cada una usará un for de una de las 3 formas vistas. Pruébalas en la consola
 
 ### 2.4 Tipos de datos básicos
 
@@ -524,7 +524,7 @@ Como hemos dicho las variables pueden contener cualquier tipo de valor y, en las
 
 Además comentar que en Javascript todo son ojetos por lo que todo tiene métodos y propiedades. Veamos brevemente los tipos de datos básicos.
 
-> EJERCICIO: Prueba en la consola las operaciones anteriores y alguna más con la que tengas dudas de qué devolverá
+> **EJERCICIO 8_UD1**: Prueba en la consola las operaciones anteriores y alguna más con la que tengas dudas de qué devolverá
 
 #### 2.4.2 Number
 
@@ -563,9 +563,9 @@ console.log(0.1 + 0.2)    // imprime 0.30000000000000004
 
 Para evitarlo redondead los resultados (o `(0.1*10 + 0.2*10) / 10`).
 
-> EJERCICIO: Modifica la funciónque quieras de calcular la nota media para que devuelva la media con 1 decimal
+> **EJERCICIO 9_UD1**: Modifica la función que quieras de calcular la nota media para que devuelva la media con 1 decimal
 
-> EJERCICIO: Modifica la función que devuelve el cubo de un número para que compruebe si el parámetro pasado es un número entero. Si no es un entero o no es un número mostrará un alert indicando cuál es el problema yndevolverá false.
+> **EJERCICIO 10_UD1**: Modifica la función que devuelve el cubo de un número para que compruebe si el parámetro pasado es un número entero. Si no es un entero o no es un número mostrará un alert indicando cuál es el problema y devolverá false.
 
 #### 2.4.3 String
 
@@ -596,7 +596,7 @@ Algunos métodos y propiedades de las cadenas son:
 
 Podemos probar los diferentes métodos en la página de [w3schools](https://www.w3schools.com/jsref/jsref_obj_string.asp).
 
-> EJERCICIO: Haz una función a la que se le pasa un DNI (ej. 12345678w o 87654321T) y devolverá si es correcto o no. La letra que debe corresponder a un DNI correcto se obtiene dividiendo la parte numérica entre 23 y cogiendo de la cadena 'TRWAGMYFPDXBNJZSQVHLCKE' la letra correspondiente al resto de la divisón. Por ejemplo, si el resto es 0 la letra será la T y si es 4 será la G. Prueba la función en la consola con tu DNI
+> **EJERCICIO 11_UD1:** Haz una función a la que se le pasa un DNI (ej. 12345678w o 87654321T) y devolverá si es correcto o no. La letra que debe corresponder a un DNI correcto se obtiene dividiendo la parte numérica entre 23 y cogiendo de la cadena 'TRWAGMYFPDXBNJZSQVHLCKE' la letra correspondiente al resto de la divisón. Por ejemplo, si el resto es 0 la letra será la T y si es 4 será la G. Prueba la función con tu DNI
 
 ##### 2.4.3.1 Template literals
 
