@@ -440,7 +440,7 @@ También podemos copiar objetos usando _rest_ y _spread_.
 
 ### 1.4 Rest y Spread
 
-Permiten extraer a parámetros los elementos de un array o string (_spread_) o convertir en un array un grupo de parámetros (_rest_). El operador de ambos es **...** (3 puntos).
+Permiten extraer a parámetros los elementos de un array o string (_spread_) o convertir en un array un grupo de parámetros (_rest_).
 
 Para usar _rest_ como parámetro de una función debe ser siempre el último parámetro:
 
