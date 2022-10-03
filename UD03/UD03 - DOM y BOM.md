@@ -70,7 +70,7 @@ NOTA: las colecciones son similares a arrays (se accede a sus elementos con _\[i
 ```javascript
 let nodos = document.getElementsByTagName('p');   // nodos contendrá todos los nodos de tipo  _<p>_
 ```
-* **.querySelector(selector)**: devuelve el primer nodo seleccionad por el _selector_ CSS indicado. Ej.:
+* **.querySelector(selector)**: devuelve el primer nodo seleccionado por el _selector_ CSS indicado. Ej.:
 ```javascript
 let nodo = document.querySelector('p.error');   // nodo contendrá el primer párrafo de clase _error_
 ```
@@ -91,7 +91,8 @@ También tenemos 'atajos' para obtener algunos elementos comunes:
 * `document.images`: devuelve una colección con todas las imágenes del documento
 * `document.scripts`: devuelve una colección con todos los scripts del documento
 
-> EJERCICIO: Para hacer los ejercicios de este tema descárgate [esta página de ejemplo](./Ejercicios/ejemploDOM.html) y ábrela en tu navegador. Obtén por consola, al menos de 2 formas diferentes:
+> **EJERCICIO 1_UD3**: Para hacer los ejercicios de este tema descárgate [esta página de ejemplo](./Ejercicios/ejemploDOM.html) y ábrela en tu navegador. Obtén por consola, al menos de 2 formas diferentes:
+>
 > - El elemento con id 'input2'
 > - La colección de párrafos
 > - Lo mismo pero sólo de los párrafos que hay dentro del div 'lipsum'
@@ -118,7 +119,8 @@ En muchas ocasiones queremos acceder a cierto nodo a partir de uno dado. Para el
 
 ![Recorrer el árbol DOM](./img/domRelaciones.png)
 
-> EJERCICIO: Siguiento con la [página de ejemplo](./Ejercicios/ejemploDOM.html) obtén desde la consola, al menos de 2 formas diferentes:
+> **EJERCICIO 2_UD3**: Siguiento con la [página de ejemplo](./Ejercicios/ejemploDOM.html) obtén desde la consola, al menos de 2 formas diferentes:
+>
 > - El primér párrafo que hay dentro del div 'lipsum'
 > - El segundo párrafo de 'lipsum'
 > - El último item de la lista
@@ -148,7 +150,8 @@ Otras propiedades:
 * `elemento.clientLeft` / `elemento.clientTop`: devuelve la distancia de _elemento_ al borde izquierdo / superior
 * `elemento.offsetLeft` / `elemento.offsetTop`: devuelve los píxels que hemos desplazado _elemento_ a la izquierda / abajo
 
-> EJERCICIO: Obtén desde la consola, al menos de 2 formas:
+> **EJERCICIO 3_UD3**: Obtén desde la consola, al menos de 2 formas:
+>
 > - El innerHTML de la etiqueta de 'Escoge sexo'
 > - El textContent de esa etiqueta
 > - El valor del primer input de sexo 
@@ -194,15 +197,22 @@ miPrimeraLista.replaceChild(nuevoLi, primerElementoDeLista);    // reemplaza el 
 
 **OJO**: Si añado con el método `appendChild` un nodo que estaba en otro sitio **se elimina de donde estaba** para añadirse a su nueva posición. Si quiero que esté en los 2 sitios deberé clonar el nodo y luego añadir el clon y no el nodo original.
 
-**Ejemplo de creación de nuevos nodos**: tenemos un código HTML con un DIV que contiene 3 párrafos y vamos a añadir un nuevo párrafo al final del div con el texto 'Párrafo añadido al final' y otro que sea el 2º del div con el texto 'Este es el <strong>nuevo</strong> segundo párrafo':
+**Para la creación de nuevos nodos**, podemos utilizar la propiedad **innerHTML**, siendo el código a usar mucho más simple.
 
-<script async src="//jsfiddle.net/juansegura/qfcdseua/embed/js,html,result/"></script>
+```javascript
+let ultimoParrafo = document.createElement('p');
+ultimoParrafo.innerHTML = 'Párrafo añadido al final';
+miDiv.appendChild(ultimoParrafo);
+```
 
-Si utilizamos la propiedad **innerHTML** el código a usar es mucho más simple:
+**OJO**: También se puede añadir un párrafo de la siguiente forma: con la siguiente: 
 
-<script async src="//jsfiddle.net/juansegura/x9s7v8kn/embed/js,html,result/"></script>
+```javascript
+miDiv.innerHTML+='<p>Párrafo añadido al final</p>';
+```
 
-**OJO**: La forma de añadir el último párrafo (línea #3: `miDiv.innerHTML+='<p>Párrafo añadido al final</p>';`) aunque es válida no es muy eficiente ya que obliga al navegador a volver a pintar TODO el contenido de miDIV. La forma correcta de hacerlo sería:
+Aunque es válida, no es muy eficiente ya que obliga al navegador a volver a pintar TODO el contenido de miDIV. La forma correcta de hacerlo sería:
+
 ```javascript
 let ultimoParrafo = document.createElement('p');
 ultimoParrafo.innerHTML = 'Párrafo añadido al final';
@@ -212,7 +222,8 @@ Así sólo debe repintar el párrafo añadido, conservando todo lo demás que te
 
 Podemos ver más ejemplos de creación y eliminación de nodos en [W3Schools](http://www.w3schools.com/js/js_htmldom_nodes.asp).
 
-> EJERCICIO: Añade a la página:
+> **EJERCICIO 4_UD3**: Añade a la página:
+>
 > - Un nuevo párrafo al final del DIV _'lipsum'_ con el texto "Nuevo párrafo **añadido** por javascript" (fíjate que una palabra estça en negrita)
 > - Un nuevo elemento al formulario tras el _'Dato 1'_ con la etiqueta _'Dato 1 bis'_ y el INPUT con id _'input1bis'_ que al cargar la página tendrá escrito "Hola" 
 
@@ -329,7 +340,7 @@ let idInterval=setInterval(function() {
 }, 3000);
 ```
 
-> EJERCICIO: Ejecuta en la consola cada una de esas funciones
+> **EJERCICIO 5_UD3**: Ejecuta en la consola cada una de esas funciones
 
 ### 2.3 Objetos del BOM
 
@@ -366,7 +377,7 @@ Sus principales propiedades y métodos son:
 * Otros métodos: `.back()`, `.forward()`, `.home()`, `.stop()`, `.focus()`, `.blur()`, `.find()`, `.print()`, …
   NOTA: por seguridad no se puede mover una ventana fuera de la pantalla ni darle un tamaño menor de 100x100 px ni tampoco se puede mover una ventana no abierta con .open() o si tiene varias pestañas
 
-> EJERCICIO: Ejecuta desde la consola:
+> **EJERCICIO 6_UD3**: Ejecuta desde la consola:
 >
 > - abre una nueva ventana de dimensiones 500x200px en la posición (100,200)
 > - escribe en ella (con document.write) un título h1 que diga 'Hola'
@@ -375,7 +386,7 @@ Sus principales propiedades y métodos son:
 
 Puedes ver un ejemplo de cómo abrir ventanas en [este vídeo](https://www.youtube.com/watch?v=jkTt6bs2tPo&list=PLI7nHlOIIPOJtTDs1HVJABswW-xJcA7_o&index=40).
 
-> EJERCICIO: Haz que a los 2 segundos de abrir la página se abra un _popup_ con un mensaje de bienvenida. Esta ventana tendrá en su interior un botón Cerrar que permitirá que el usuario la cierre haciendo clic en él. Tendrá el tamaño justo para visualizar el mensaje y no tendrá barras de scroll, ni de herramientas, ni de dirección... únicamente el mensaje.
+> **EJERCICIO 7_UD3**: Haz que a los 2 segundos de abrir la página se abra un _popup_ con un mensaje de bienvenida. Esta ventana tendrá en su interior un botón Cerrar que permitirá que el usuario la cierre haciendo clic en él. Tendrá el tamaño justo para visualizar el mensaje y no tendrá barras de scroll, ni de herramientas, ni de dirección... únicamente el mensaje.
 
 ##### 2.3.1.1 Diálogos
 
@@ -396,7 +407,7 @@ Contiene información sobre la URL actual del navegador y podemos modificarla. S
 * `.assign(url)`: carga la página pasada como parámetro
 * `.replace(url)`: ídem pero sin guardar la actual en el historial
 
-> EJERCICIO: Ejecuta en la consola
+> **EJERCICIO 8_UD3**: Ejecuta en la consola
 >
 > - muestra la ruta completa de la página actual
 > - muestra el servidor de esta página
@@ -411,7 +422,7 @@ Permite acceder al historial de páginas visitadas y navegar por él:
 * `.forward()`: va a la siguiente página
 * `.go(num)`: se mueve _num_ páginas hacia adelante o hacia atrás (si _num_ es negativo) en el historial
 
-> EJERCICIO: desde la consola vuelve a la página anterior
+> **EJERCICIO 9_UD3**: desde la consola vuelve a la página anterior
 
 #### 2.3.4 Otros objetos
 
@@ -427,7 +438,7 @@ Los otros objetos que incluye BOM son:
   * `.availWidth`/`.availHeight`: igual pero excluyendo la barra del S.O.
   * ...
 
-> EJERCICIO: obtén desde la consola todas las propiedades width/height y availWidth/availHeight del objeto _scrren_. Compáralas con las propiedades innerWidth/innerHeight y outerWidth/outerHeight de _window_.
+> **EJERCICIO 10_UD3**: obtén desde la consola todas las propiedades width/height y availWidth/availHeight del objeto _scrren_. Compáralas con las propiedades innerWidth/innerHeight y outerWidth/outerHeight de _window_.
 
 ## 3. El patrón Modelo-Vista-Controlador
 
