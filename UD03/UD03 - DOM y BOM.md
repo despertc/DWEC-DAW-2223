@@ -438,7 +438,7 @@ Los otros objetos que incluye BOM son:
   * `.availWidth`/`.availHeight`: igual pero excluyendo la barra del S.O.
   * ...
 
-> **EJERCICIO 10_UD3**: obtén desde la consola todas las propiedades width/height y availWidth/availHeight del objeto _scrren_. Compáralas con las propiedades innerWidth/innerHeight y outerWidth/outerHeight de _window_.
+> **EJERCICIO 10_UD3**: obtén desde la consola todas las propiedades width/height y availWidth/availHeight del objeto _screen_. Compáralas con las propiedades innerWidth/innerHeight y outerWidth/outerHeight de _window_.
 
 ## 3. El patrón Modelo-Vista-Controlador
 
