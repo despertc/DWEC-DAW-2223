@@ -224,7 +224,7 @@ Podemos ver más ejemplos de creación y eliminación de nodos en [W3Schools](ht
 
 > **EJERCICIO 4_UD3**: Añade a la página:
 >
-> - Un nuevo párrafo al final del DIV _'lipsum'_ con el texto "Nuevo párrafo **añadido** por javascript" (fíjate que una palabra estça en negrita)
+> - Un nuevo párrafo al final del DIV _'lipsum'_ con el texto "Nuevo párrafo **añadido** por javascript" (fíjate que una palabra está en negrita)
 > - Un nuevo elemento al formulario tras el _'Dato 1'_ con la etiqueta _'Dato 1 bis'_ y el INPUT con id _'input1bis'_ que al cargar la página tendrá escrito "Hola" 
 
 #### 1.5.1 Modificar el DOM con [ChildNode](https://developer.mozilla.org/en-US/docs/Web/API/ChildNode)
