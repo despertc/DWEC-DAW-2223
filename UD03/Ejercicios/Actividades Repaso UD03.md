@@ -15,7 +15,7 @@ Dada la siguiente página web:
         onload=cadenas
         function cadenas(){
             // Pedimos una cadena al usuario
-            let cadena=prompt("Escrive una cadena de texto");
+            let cadena=prompt("Escribe una cadena de texto");
             // A completar...
 }
     </script>
@@ -31,7 +31,7 @@ Se pide completar la función `cadenas` para que muestre en la web mediante la c
 - Cuántos caracteres tiene la cadena
 - Posición en la que aparece por primera vez el carácter "a" 
 - Posición en la que aparece por última vez el carácter "a"
-- Si la cadena empieza por "A" Si la cadena acaba por "Uno"
+- Por qué caracter empieza la cadena y por cuá acaba.
 
 Por ejemplo, ante la cadena: "AaeEIioOuU", la salida será:
 
