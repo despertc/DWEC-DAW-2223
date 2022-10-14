@@ -60,9 +60,7 @@ document.getElementById('boton1').addEventListener('click', function() {
 });
 ```
 
-Si queremos pasarle algún parámetro a la función escuchadora (cosa bastante poco usual) debemos usar funciones anónimas como escuchadores de eventos:
-
-<script async src="//jsfiddle.net/juansegura/L5pkg93w/1/embed/js,html,result/"></script>
+Si queremos pasarle algún parámetro a la función escuchadora (cosa bastante poco usual) debemos usar funciones anónimas como escuchadores de eventos.
 
 NOTA: igual que antes debemos estar seguros de que se ha creado el árbol DOM antes de poner un escuchador por lo que se recomienda ponerlos siempre dentro de la función asociada al evento `window.onload` (o mejor `window.addEventListener('load', ...)` como en el ejemplo anterior).
 
@@ -92,7 +90,7 @@ Los produce el usuario con el ratón:
 
 NOTA: si hacemos doble click sobre un elemento la secuencia de eventos que se produciría es: _mousedown_ -> _mouseup_ -> _click_ -> _mousedown_ -> _mouseup_ -> _click_ -> _dblclick_
 
-> **EJERCICIO 01_UD4**: Pon un escuchador desde la consola al botón 1 de la [página de ejemplo de DOM](./ejercicios/ejemplos/ejemploDOM.html) para que al hacer click se muestre el un alert con 'Click sobre botón 1'. Ponle otro para que al pasar el ratón sobre él se muestre 'Entrando en botón 1'.
+> **EJERCICIO 01_UD4**: Pon un escuchador desde la consola al botón 1 de la página de ejemplo de DOM para que al hacer click se muestre el un alert con 'Click sobre botón 1'. Ponle otro para que al pasar el ratón sobre él se muestre 'Entrando en botón 1'.
 
 ### 3.3 Eventos de teclado
 Los produce el usuario al usar el teclado:
@@ -100,8 +98,7 @@ Los produce el usuario al usar el teclado:
 * **keyup**: cuando se deja de presionar la tecla
 * **keypress**: acción de pulsar y soltar (sólo se produce en las teclas alfanuméricas)
 
-NOTA: el orden de secuencia de los eventos es:
-_keyDown_ -> _keyPress_ -> _keyUp_
+NOTA: el orden de secuencia de los eventos es:_keyDown_ -> _keyPress_ -> _keyUp_
 
 ### 3.4 Eventos de toque
 Se producen al usar una pantalla táctil:
@@ -155,7 +152,7 @@ Lo mejor para familiarizarse con los diferentes eventos es consultar los [ejempl
 
 > **EJERCICIO 03_UD4**: Pon desde la consola un escuchador al BODY de la página de ejemplo para que al pulsar cualquier tecla nos muestre en un alert el _key_ y el _keyCode_ de la tecla pulsada. Pruébalo con diferentes teclas
 
-### 4.1_Bindeo_ del objeto _this_
+### 4.1 "Bindeo" del objeto _this_
 En ocasiones no queremos que _this_ sea el elemento sobre quien se produce el evento sino que queremos conservar el valor que tenía antes de entrar a la función escuchadora. Por ejemplo la función escuchadora es un método de una clase en _this_ tenemos el objeto de la clase sobre el que estamos actuando pero al entrar en la función perdemos esa referencia.
 
 El método _.bind()_ nos permite pasarle a una función el valor que queremos darle a la variable _this_ dentro de dicha función. Por defecto a una función escuchadora de eventos se le _bindea_ le valor de **event.currentTarget**. Si queremos que tenga otro valor se lo indicamos con **.bind()**: 
@@ -186,7 +183,7 @@ function aceptado(param1, param2, event) {
 ## 5. Propagación de eventos (bubbling)
 Normalmente en una página web los elementos HTML se solapan unos con otros, por ejemplo, un \<span> está en un \<p> que está en un \<div> que está en el \<body>. Si ponemos un escuchador del evento _click_ a todos ellos se ejecutarán todos ellos, pero ¿en qué orden?.
 
-Pues el W3C establecíó un modelo en el que primero se disparan los eventos de fuera hacia dentro (primero el \<body>) y al llegar al más interno (el \<spab>) se vuelven a disparar de nuevo pero de dentro hacia afuera. La primera fase se conoce como **fase de captura** y la segunda como **fase de burbujeo**. Cuando ponemos un escuchador con `addEventListener` el tercer parámetro indica en qué fase debe dispararse:
+Pues el W3C establecíó un modelo en el que primero se disparan los eventos de fuera hacia dentro (primero el \<body>) y al llegar al más interno (el \<span>) se vuelven a disparar de nuevo pero de dentro hacia afuera. La primera fase se conoce como **fase de captura** y la segunda como **fase de burbujeo**. Cuando ponemos un escuchador con `addEventListener` el tercer parámetro indica en qué fase debe dispararse:
 - **true**: en fase de captura
 - **false** (valor por defecto): en fase de burbujeo
 
