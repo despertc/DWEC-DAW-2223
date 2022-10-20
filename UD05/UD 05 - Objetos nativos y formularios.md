@@ -6,7 +6,7 @@
 
 ### 1.1 Introducción
 
-En este tema vamos a ver las funciones globales de Javascript (muchas de las cuales ya hemos visto como _Number()_ o _String()_) y los objetos nativos que incorpora Javascript y que nos facilitarán el trabajo proporcionándonos métodos y propiedades útiles para no tener que "reinventar la rueda" en nuestras aplicaciones. Dentro de ellos está el objeto **RegExpr** que nos permite trabajar con **expresiones regulares** (son iguales que en otros lenguajes) que nos serán de gran ayuda, sobre todo a la hora de validar formularios y que por eso veremos en la siguiente unidad.
+En este tema vamos a ver las funciones globales de Javascript (muchas de las cuales ya hemos visto como _Number()_ o _String()_) y los objetos nativos que incorpora Javascript y que nos facilitarán el trabajo proporcionándonos métodos y propiedades útiles para no tener que "reinventar la rueda" en nuestras aplicaciones. Dentro de ellos está el objeto **RegExpr** que nos permite trabajar con **expresiones regulares** (son iguales que en otros lenguajes) que nos serán de gran ayuda, sobre todo a la hora de validar formularios y que por eso veremos en la siguiente sección.
 
 ### 1.2 Funciones globales
 * `parseInt(valor)`: devuelve el valor pasado como parámetro convertido a entero o _NaN_ si no es posible la conversión. Este método es mucho más permisivo que _Number_ y convierte cualquier cosa que comience por un número (si encuentra un carácter no numérico detiene la conversión y devuelve lo convertido hasta el momento). Ejemplos:
@@ -123,7 +123,7 @@ Ejemplos:
 
 ```javascript
 let date1=new Date()    // Mon Jul 30 2018 12:44:07 GMT+0200 (CEST) (es cuando he ejecutado la instrucción)
-let date7=new Date(1532908800000)    // Mon Jul 30 2018 00:00:00 GMT+0200 (CEST) (miliseg. desde 1/1/1070)
+let date7=new Date(1532908800000)    // Mon Jul 30 2018 00:00:00 GMT+0200 (CEST) (miliseg. desde 1/1/1970)
 let date2=new Date('2018-07-30')    // Mon Jul 30 2018 02:00:00 GMT+0200 (CEST) (la fecha pasada a las 0h. GMT)
 let date3=new Date('2018-07-30 05:30')  // Mon Jul 30 2018 05:30:00 GMT+0200 (CEST) (la fecha pasada a las 05:300h. local)
 let date6=new Date('07-30-2018')    // Mon Jul 30 2018 00:00:00 GMT+0200 (CEST) (OJO: formato MM-DD-AAAA)
@@ -221,9 +221,9 @@ Podemos probar los distintos métodos de las fechas en la página de [w3schools]
 
 ### 2.1 Introducción
 
-En este tema vamos a ver cómo realizar una de las acciones principales de Javascript que es la validación de formularios en el lado cliente.
+En este apartado vamos a ver cómo realizar una de las acciones principales de Javascript que es la validación de formularios en el lado cliente.
 
-Se trata de una verificación útil porque evita enviar datos al servidor que sabemos que no son válidos pero NUNCA puede sustituir a la validación en el lado servidor ya que en el lado cliente se puede manipular el código desde la consola para que se salte las validaciones que le pongamos.
+Se trata de una verificación útil porque evita enviar datos al servidor que sabemos que no son válidos pero **NUNCA** puede sustituir a la validación en el lado servidor ya que en el lado cliente se puede manipular el código desde la consola para que se salte las validaciones que le pongamos.
 
 Podéis encontrar una guía muy completa de validación de formularios en el lado cliente el la página de [MDN web docs](https://developer.mozilla.org/es/docs/Learn/HTML/Forms/Validacion_formulario_datos) que ha servido como base para estos apuntes.
 
@@ -369,7 +369,7 @@ La potencia de las expresiones regulares es que podemos usar patrones para const
   * `[^abc]`: cualquiera excepto los indicados
   * `[a-z]`: cualquier minúscula (el carácter '-' indica el rango entre 'a' y 'z', incluidas)
   * `[a-zA-Z]`: cualquier letra
-* **( | )** (_pipe_): debe coincidir con una de las opciones indocadas:
+* **( | )** (_pipe_): debe coincidir con una de las opciones indicadas:
   * `(x|y)`: la letra x o la y (sería equivalente a `[xy]`
   * `(http|https)`: cualquiera de las 2 palabras
 * **Metacaracteres**:
