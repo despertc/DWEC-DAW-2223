@@ -438,7 +438,7 @@ console.log(str.match(reg)); // Imprime ["am", "am", "Am"}
 ```
 
 * `cadena.search(expr)`: devuelve la posición donde se encuentra la coincidencia buscada o -1 si no aparece
-* `cadena.replace(expr, cadena2)`: devuelve una nueva cadena xon las coincidncias de la cadena reemplazadas por la cedena pasada como 2º parámetro:
+* `cadena.replace(expr, cadena2)`: devuelve una nueva cadena con las coincidecias de la cadena reemplazadas por la cadena pasada como 2º parámetro:
 
 ```javascript
 let str = "I am amazed in America";
