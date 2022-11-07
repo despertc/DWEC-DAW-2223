@@ -34,17 +34,15 @@ El ejercicio se debe realizar de tres formas posibles:
 
 ## Repaso 6.2 - Petición POST
 
-Vamos a utilizar el siguiente recurso para simular la introducción de un comentario en una página web: https://freefakeapi.io/api. En concreto utilizaremos la dirección para comentarios: https://freefakeapi.io/api/comments 
+Vamos a utilizar el siguiente recurso para simular la introducción de un comentario en una página web: https://jsonplaceholder.typicode.com. En concreto utilizaremos la dirección para comentarios: https://jsonplaceholder.typicode.com/posts
 
 Los parámetros a enviar en el cuerpo de forma obligatoria son:
 
-The differents parameters to put in the body (all parameters are mandatory)
-
-| Nombre  | Tipo    |
-| ------- | ------- |
-| content | string  |
-| user    | integer |
-| post    | integer |
+| Nombre | Tipo    |
+| ------ | ------- |
+| title  | string  |
+| body   | string  |
+| userId | integer |
 
 Para poder probar correctamente este tipo de petición, realizaremos un formulario con el cual interactuaremos y insertaremos el contenido del comentario, el usuario y el post a comentar. Incluiremos un botón de envío que realizará la petición POST. 
 
