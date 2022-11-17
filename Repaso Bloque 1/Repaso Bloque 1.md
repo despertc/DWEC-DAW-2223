@@ -4,7 +4,7 @@ Crear una página web básica, un archivo CSS con estilos predefinidos para unos
 
 1. Crear un div, añadirle una clase predefinida en el CSS y añadirlo al body de nuestro DOM.
 2. Crear un párrafo, asignándole un id y añadiéndolo al div anteriormente creado.
-3. Crear un formulario con el aspecto que aparece a continuación que realizaría una búsqueda de Google. Lo insertaremos en el div y cuando se vaya a enviar el formulario, cancelaremos el funcionamiento por defecto de este, y en cambio, realizaremos la consulta a otra página de búsqueda, modificando el documento.location, con un valor por ejemplo de https://www.bing.com/search?q=texto_del_input_con_name_q
+3. Crear un formulario con el aspecto que aparece a continuación que realizaría una búsqueda de Google. Lo insertaremos en el div y cuando se vaya a enviar el formulario, cancelaremos el funcionamiento por defecto de este, y en cambio, realizaremos la consulta a otra página de búsqueda, modificando el `document.location`, con un valor por ejemplo de https://www.bing.com/search?q=texto_del_input_con_name_q
 
 ```html
 <form name="busca" action="https://www.google.es/search">
@@ -38,7 +38,7 @@ El funcionamiento de la página será:
 
 Para obtener los productos se hará una petición AJAX al siguiente endpoint: https://fakestoreapi.com/products/id_producto (id_producto debe ser modificado).
 
-El objeto que devolverá será de esta forma para el ejemplo de id_producto=1:
+El objeto que devolverá será de esta forma para el ejemplo de `id_producto=1`:
 
 ```json
 {
