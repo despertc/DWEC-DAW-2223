@@ -24,3 +24,36 @@ Crear una página web básica, un archivo CSS con estilos predefinidos para unos
 
 Cada vez que hagamos doble click sobre el texto de la tabla, se deberá borrar la fila correspondiente.
 
+
+
+## Repaso B1.2 - Mini Tienda
+
+En este ejercicio vamos a crear una tienda básica a partir de una web vacía que contendrá una cabecera simple, un formulario de búsqueda y una zona principal donde se incluirá la información que se reciba del servidor.
+
+El funcionamiento de la página será:
+
+1. Al cargar la web, se verá el formulario de búsqueda y una imagen que ocupará todo el ancho de la página.
+2. El formulario podrá mostrar información a partir del id del producto a buscar del producto.
+3. Cuando se busque un producto se mostrará de la mejor forma posible en la zona principal, el título, la descripción, la imagen, el precio y la categoría del producto.
+
+Para obtener los productos se hará una petición AJAX al siguiente endpoint: https://fakestoreapi.com/products/id_producto (id_producto debe ser modificado).
+
+El objeto que devolverá será de esta forma para el ejemplo de id_producto=1:
+
+```json
+{
+    "id": 1,
+    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    "price": 109.95,
+    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    "category": "men's clothing",
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    "rating": {
+      "rate": 3.9,
+      "count": 120
+    }
+```
+
+EXTRA: Se puede colocar un botón que muestre todos los productos de una categoría llamando al endpoint: https://fakestoreapi.com/products/categories
+
+Se deberá incluir cada producto en la web con el mismo formato.
