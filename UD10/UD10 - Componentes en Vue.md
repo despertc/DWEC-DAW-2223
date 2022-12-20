@@ -532,9 +532,9 @@ Entre las propiedades que puede tener el objeto están:
 - **props**: donde registramos los parámetros que nos pasa el componente padre como atributos de la etiqueta que renderiza este componente
 - **data**: función que devuelve un objeto con todas las variables locales del componente
 - **methods**: objeto con los métodos del componente
-- **computed**: aquí pondremos las variables calculadas del componente. Lo veremos en detalle en la [unidad 6](https://cipfpbatoi.github.io/materials/daw/dwc/02-vue/06-profundizando.html#computed)
-- **created()**, **mounted()**, ...: funciones _hook_ que se ejecutan al crearse el componente, al montarse, ... Aquí pondremos el código que queremos que se ejecute al cargar un componente, como pedir a la BBDD los datos que necesita. Veremos los diferentes _hooks_ en la [unidad 6](https://cipfpbatoi.github.io/materials/daw/dwc/02-vue/06-profundizando.html#ciclo-de-vida-del-componente)
-- **watch**: si queremos observar manualmente cambios en alguna variable y ejecutar código como respuesta a ellos (recuerda que Vue ya se encarga de actualizar la vista al cambiar las variables y viceversa). Lo veremos en detalle en la [unidad 6](https://cipfpbatoi.github.io/materials/daw/dwc/02-vue/06-profundizando.html#watchers)
+- **computed**: aquí pondremos las variables calculadas del componente. Lo veremos en detalle en las siguientes unidades.
+- **created()**, **mounted()**, ...: funciones _hook_ que se ejecutan al crearse el componente, al montarse, ... Aquí pondremos el código que queremos que se ejecute al cargar un componente, como pedir a la BBDD los datos que necesita. Veremos los diferentes _hooks_ en las siguientes unidades.
+- **watch**: si queremos observar manualmente cambios en alguna variable y ejecutar código como respuesta a ellos (recuerda que Vue ya se encarga de actualizar la vista al cambiar las variables y viceversa). Lo veremos en detalle en las siguientes unidades.
 - ...
 
 ##### \<style>
@@ -598,21 +598,6 @@ npm install -S axios
 ```
 
 Para usarlo en nuestros componentes debemos importarlo y registrarlo tal y como se indique en su documentación. Lo normal es hacerlo en el **_main.js_** (o en algún fichero JS que importemos en _main.js_ como en el caso de los plugins) si queremos poderlo usar en todos los componentes.
-
-Si el paquete que queremos instalar se encuentra como plugin el proceso es más sencillo ya que sólo es necesario usar `vue add` (antes conviene haber hecho un _commit_) desde la carpeta del proyecto, por ejemplo para añadir el plugin _vuetify_ ejecutamos:
-
-```bash
-vue add vuetify
-```
-
-Esto automáticamente:
-
-* instala el plugin dentro de _node-modules_
-* añade el paquete al fichero _package.json_
-* crea un fichero JS dentro de la carpeta **_plugins_** que importa y registra esa librería
-* importa dicho fichero al **_main.js_**
-
-NOTA: actualmente Vuetify sólo soporta Vue3 en su versión Beta, por lo que esto sólo funcionará en Vue2
 
 #### 3.4.1 Bootstrap
 
