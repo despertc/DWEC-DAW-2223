@@ -202,14 +202,14 @@ Los contenidos detallados de cada bloque son:
   - UD7 - Apis y otros usos.
   - UD8 - Testeo con JS.
 - Bloque 2: Vue JS
-  - UD9 - Introducción y elementos básicos
-  - UD10 - Directivas
-  - UD11 - Componentes
+  - UD9 - Introducción y elementos básicos. Directivas
+  - UD10 - Componentes
+  - UD11 - Comunicación entre componentes
   - UD12 - Axios 
   - UD13 - SPA: vue-router
-  - UD14 - Formularios
+  - UD14 - Profundizando en Vue
   - UD15 - Pinia
-  - UD16 - Composition API
+  - UD16 - Otros elementos a estudiar. Composition API.
 
 ### 5. Metodología
 
