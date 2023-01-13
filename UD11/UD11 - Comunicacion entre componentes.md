@@ -493,8 +493,6 @@ Es una librería para gestionar los estados en una aplicación Vue. Ofrece un al
 
 En realidad es un _store pattern_ que ya tiene muchas cosas hechas y que se integra perfectamente con las _DevTools_.
 
-Lo veremos en detalla en la [unidad dedicada a esta librería](https://cipfpbatoi.github.io/materials/daw/dwc/02-vue/07-pinia.html).
-
 ## 6. Slots
 Otra forma en que un componente hijo puede mostrar información del padre es usando _slots_. Un _slot_ es una ranura en un componente que, al renderizarse, se rellena con lo que le pasa el padre en el innerHTML de la etiqueta del componente. El _slot_ tiene acceso al contexto del componente padre, no al del componente donde se renderiza. Los _slots_ son una herramienta muy potente. Podemos obtener toda la información en la [documentación de Vue](https://v3.vuejs.org/guide/component-slots.html#slot-content). 
 
@@ -586,5 +584,4 @@ El atributo _slot_ podemos ponérselo a cualquier etiqueta (no tiene que ser \<t
   <p slot="footer">Here's some contact info</p>
 </base-layout>
 ```
-
 
