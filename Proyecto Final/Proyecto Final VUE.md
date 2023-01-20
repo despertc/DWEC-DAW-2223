@@ -1,10 +1,87 @@
 # Proyecto Final VUE
 
-## 1. Aplicación base
+## 1. Requisitos
 
 Vamos a hacer en Vue una aplicación de gestión de un almacén con productos. 
 
 Como API para almacenar los datos usaremos json-server. Deberéis instalarlo y configurarlo correctamente para poder acceder a él. También, dentro del proyecto necesitaremos instalar  la librería **axios** y para la apariencia usaremos también **bootstrap** y sus iconos.
+
+Para instalar **bootstrap** dentro del proyecto utilizamos:
+
+```shell
+npm install bootstrap
+```
+
+Para instalar **axios** dentro del proyecto utilizamos:
+
+```shell
+npm install axios
+```
+
+Para la instalación de json-server, lo haremos de forma global, en nuestro sistema, no dento del proyecto de Vue. Utilizaremos el comando (si hace falta, sudo):
+
+```shell
+npm install -g json-server
+```
+
+A continuación en otra terminal, podemos arrancar este servidor json-server creando un archivo con extension .json y rellenandolo con las tablas que consideremos. Ejemplo:
+
+##### data.json
+
+```json
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "Frutas"
+    },
+    {
+      "id": 1,
+      "name": "Verduras"
+    },
+    {
+      "id": 2,
+      "name": "Frutos Secos"
+    },
+    {
+      "id": 3,
+      "name": "Dulces"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Calabazas",
+      "category": 1,
+      "units": 100,
+      "price": 11
+    },
+    {
+      "id": 3,
+      "name": "Palomitas",
+      "category": 2,
+      "units": 100,
+      "price": 1
+    }
+  ]
+}
+```
+
+
+
+Para ejecutarlo, lo hacemos desde la carpeta en la que esté el archivo con el comando:
+
+```shell
+json-server data.json
+```
+
+Ya podremos acceder al servidor json mediante las url de cada objeto:
+
+http://localhost:3000/products
+
+http://localhost:3000/categories
+
+## 2. Aplicación base
 
 En nuestra App.vue tendremos como mínimo los siguientes componentes:
 
@@ -19,7 +96,9 @@ El aspecto de la aplicación será la siguiente:
 
 Nuestra aplicación debe pedir los datos al servidor y mostrarlos en la tabla. Bajo la tabla se muestra el total de productos listados y el importe total de los mismos (usaremos variables **computed**).
 
-También será funcional el formulario (aunque no lo validaremos mas que en el HTML). El formulario tendrá unos botones de borrar producto y aumentar y disminuir unidades. 
+También será funcional el formulario (aunque no lo validaremos mas que en el HTML). 
+
+Cada item del formulario tendrá unos botones de borrar producto y aumentar y disminuir unidades. También el de editar, pero no será funcional.
 
 Antes de borrar un producto pediremos confirmación al usuario en la que le indicaremos el nombre del producto que se va a borrar. Estos botones ( y el formulario) deberán modificar los datos en la BBDD.
 
@@ -49,7 +128,7 @@ clearProductsAction () {
 
 porque entonces la variable *products* dejaría de ser reactiva (la estamos machacando). Debemos usar métodos que no modifiquen la variable original, como *push*, *splice*, ...
 
-## 2. Recursos
+## 3. Recursos
 
 Se suministra el siguiente código para que lo podáis utilizar y tener la base del proyecto:
 
