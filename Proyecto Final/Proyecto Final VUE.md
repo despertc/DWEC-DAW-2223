@@ -15,7 +15,7 @@ En nuestra App.vue tendremos como mínimo los siguientes componentes:
 
 El aspecto de la aplicación será la siguiente:
 
-![prfinal](/Users/davidespertcompany/Google Drive/DWEC/Git/DWEC-DAW-2223/Proyecto Final/img/prfinal.png)
+![prfinal](./img/prfinal.png)
 
 Nuestra aplicación debe pedir los datos al servidor y mostrarlos en la tabla. Bajo la tabla se muestra el total de productos listados y el importe total de los mismos (usaremos variables **computed**).
 
@@ -25,7 +25,7 @@ Antes de borrar un producto pediremos confirmación al usuario en la que le indi
 
 El resultado será algo como esto:
 
-![tabla](/Users/davidespertcompany/Google Drive/DWEC/Git/DWEC-DAW-2223/Proyecto Final/img/tabla.png)
+![tabla](./img/tabla.png)
 
 
 
