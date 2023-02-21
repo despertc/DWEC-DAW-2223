@@ -159,15 +159,15 @@ const baseURL = 'http://localhost:3000';
 export default {
   getTodos() {
     return axios.get(baseURL+'/todos')
-  },
+  }
 
   delTodo(id){
     return axios.delete(baseURL+'/todos/'+id)
-  },
+  }
 
   addTodo(newTodo) {
     return axios.post(baseURL+'/todos', newTodo)
-  },
+  }
 
   toogleDone(todo) {
     return axios.put(baseURL+'/todos/'+todo.id, {
@@ -175,7 +175,7 @@ export default {
       title: todo.title, 
       done: !todo.done
     })
-  },
+  }
 }
 ```
 
@@ -189,7 +189,7 @@ export default {
     getData() {
       getTodos()
       .then(response=>response.data.forEach(todo=>this.todos.push(todo)))
-      .catch(error=>console.error('Error: '+(error.statusText || error.message || error))
+      .catch(error=>console.error('Error: '+(error.statusText || error.message || error)))
     },
     ...
   },
